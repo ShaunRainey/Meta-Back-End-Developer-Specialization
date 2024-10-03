@@ -28,8 +28,9 @@ def test_length(input_value):
                    in the input_value() function
     """
     ### WRITE SOLUTION CODE HERE
-    print(input_value)
-    raise NotImplementedError()
+    assert spellcheck.word_count(input_value) < 10
+    assert spellcheck.char_count(input_value) < 50
+    #raise NotImplementedError()
 
 # Second test function test_struc()
 def test_struc(input_value):
@@ -44,7 +45,8 @@ def test_struc(input_value):
                    in the input_value() function
     """
     ### WRITE SOLUTION CODE HERE
-
-    raise NotImplementedError()
+    assert spellcheck.first_char(input_value).isupper()
+    assert spellcheck.last_char(input_value) is '.'
+    #raise NotImplementedError()
 
 # Run these tests with `python3 -m pytest test_spellcheck.py`
