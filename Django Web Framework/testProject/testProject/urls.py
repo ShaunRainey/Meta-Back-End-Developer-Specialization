@@ -27,3 +27,5 @@ urlpatterns = [
     path("getform/", include('testApp.urls')),
 ]
 
+handler404 = 'testProject.views.handler404'
+
