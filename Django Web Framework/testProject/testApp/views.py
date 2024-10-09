@@ -12,8 +12,8 @@ def home(request):
 
 def testTemplate(request, name): 
     template = loader.get_template('hello.html') 
-    context={"name":name} 
-    print('TEMPLATE TEST', dir(request))
+    context={"name":name, "species": "human"} 
+    #print('TEMPLATE TEST', dir(request))
     return render(request, 'hello.html', context)  
 
 def index(request): 
