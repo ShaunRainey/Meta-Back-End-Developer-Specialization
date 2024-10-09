@@ -1,14 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 def home(request):
     #print(dir(request))
-    print(request)
+    #print(request)
     #print(request.content_params)
-    print("status code: ", HttpResponse.status_code)
-    print(dir(HttpResponse.content))
-    return HttpResponse('Welcome to Little Lemon Restaurant')
-# Create your views here.   
+    #print("status code: ", HttpResponse.status_code)
+    #print(dir(HttpResponse.content))
+    return HttpResponse('<h1>Welcome to Little Lemon Restaurant</h1>')
+
+def testTemplate(request, name): 
+    template = loader.get_template('hello.html') 
+    context={"name":name} 
+    print('TEMPLATE TEST', dir(request))
+    return render(request, 'hello.html', context)  
 
 def index(request): 
     path = request.path 
@@ -41,3 +47,6 @@ def getform(request):
         id=request.POST['id'] 
         name=request.POST['name'] 
     return HttpResponse("Name:{} UserID:{}".format(name, id)) 
+
+def getTemplate(request):
+    pass

@@ -7,4 +7,5 @@ urlpatterns = [
     path('getuser/<name>/<id>', views.pathview, name='pathview'),
     path('form/', views.showform),
     path("getform/", views.getform, name='getform'),
+    path("template/<name>/", views.testTemplate, name='testTemplate'),
 ]

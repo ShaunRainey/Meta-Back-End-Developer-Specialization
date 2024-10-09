@@ -25,6 +25,7 @@ urlpatterns = [
     path('getuser/<name>/<id>', include('testApp.urls')),
     path('form/', include('testApp.urls')),
     path("getform/", include('testApp.urls')),
+    path("template/", include('testApp.urls')),
 ]
 
 handler404 = 'testProject.views.handler404'
