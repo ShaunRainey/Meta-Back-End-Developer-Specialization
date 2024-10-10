@@ -20,4 +20,4 @@ Steps to make a Template:
 1) Create template folder in project base directory (should be on the same level as app)
 2) Create template.html files and populate
 3) In Settings.py, within 'TEMPLATES = [.....] change DIRS to ['templates']
-4) Create a view using 'return render(request, 'page.html', {'content':variable_content})'
+4) Create a view using 'return render(request, 'page.html', {dictionary})'
